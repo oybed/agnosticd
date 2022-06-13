@@ -50,10 +50,10 @@
     owner: root
     group: root
 
-- name: Install OpenShift Helm 3
+- name: Install Helm on the bastion
   when: install_helm | default(False) | bool
   get_url:
-    url: "{{ bastion_lite_inst_root_url }}/openshift-v4/clients/helm/{{ bastion_lite_helm_version }}/helm-linux-amd64"
+    url: "{{ bastion_lite_helm_url }}" # See defaults/main.yml for default values
     dest: /usr/bin/helm
     owner: root
     group: root

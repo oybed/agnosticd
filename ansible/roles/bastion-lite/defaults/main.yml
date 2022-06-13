@@ -1,2 +1,14 @@
 ---
-# defaults file for bastion
+
+##################################################################
+## Bastion Lite Helm default parameters
+bastion_lite_helm_root_url: "{{ bastion_lite_inst_root_url }}"
+bastion_lite_helm_version: latest
+bastion_lite_helm_url: "{{ bastion_lite_helm_root_url }}/openshift-v4/clients/helm/{{ bastion_lite_helm_version }}/helm-linux-amd64" 
+
+# Variable name kept to stay backwards compatible
+bastion_lite_inst_root_url: https://mirror.openshift.com/pub
+
+## Bastion Lite Helm parameters
+##################################################################
+
